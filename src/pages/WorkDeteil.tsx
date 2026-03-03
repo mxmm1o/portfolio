@@ -1,4 +1,4 @@
-import { Header } from "../components/Header";
+import { Header } from "../components/ヘッダー";
 
 export function WorkDeteil() {
     return (
