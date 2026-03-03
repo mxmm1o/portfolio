@@ -1,4 +1,4 @@
-import { Header } from "../components/ヘッダー";
+import { Header } from "../components/Header";
 
 export function Contact() {
     return (
