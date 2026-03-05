@@ -7,6 +7,7 @@ export function About() {
         <>
 
             <div className={styles.background}>
+
                 <Header />
                 <div className={styles.content}>
                     <div className={styles.photo}>
@@ -14,7 +15,28 @@ export function About() {
                     </div>
                     <div className={styles.text}>
                         <p> Narumi Ishizu 石津 成海</p>
-                        <p>べんきょうがんばります</p>
+                        <p>1999年広島生まれ。広島修道大学商学部商学科卒。</p>
+                        <p> 映像のディレクションを仕事にしていた。最近は自分で手を動かしてシェーダーの練習をしている。</p>
+                        <p> </p>
+                        <p> </p>
+                        <p>好きなもの</p>
+                        <p>散歩</p>
+                        <p>ペットの勲(いさお)</p>
+                        <p>横浜DeNAベイスターズ</p>
+                        <p>純喫茶のクリームソーダ</p>
+                        <p>フィルムカメラで街を撮ること</p>
+                        <p>薄暗い夜明け</p>
+                        <p>自堕落な生活</p>
+                        <p> </p>
+                        <p> </p>
+                        <p>email</p>
+                        <p>ishizunarumi@gmail.com</p>
+                        <p> </p>
+                        <p> </p>
+                        <p>instagram</p>
+
+                        <p>AppleMusicはる</p>
+
 
                     </div>
                 </div>

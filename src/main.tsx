@@ -5,7 +5,7 @@ import { Home } from './pages/Home.tsx';
 import {
   createBrowserRouter, RouterProvider
 } from 'react-router'
-import { About } from './pages/About.tsx'
+import { About } from './pages/About'
 import { WorkDeteil } from './pages/WorkDeteil.tsx'
 
 
