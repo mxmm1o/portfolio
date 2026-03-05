@@ -13,3 +13,16 @@
     right: 1rem;
     z-index: 1;
 }
+
+.name {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: -1;
+    color: #000;
+
+}
+
+.name:hover {
+    color: #fff;
+}
