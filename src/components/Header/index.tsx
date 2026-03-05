@@ -1,13 +1,19 @@
-import { Link } from "react-router";
+import { useState } from "react";
+import { MenuOverlay } from "../MenuOverlay/index";
 import styles from "./style.module.css";
-
 export function Header() {
-    return (<header className={styles.header}>
-        <Link to="/works">works</Link>
-        <Link to="/about">about</Link>
-        <Link to="/contact">contact</Link>
-        <Link to="/">home</Link>
-    </header>
-    )
+    const [isOpen, setIsOpen] = useState(false);
+    const handleClick = (): void => {
+        setIsOpen(!isOpen);
+    };
+    return (
+        <>
+            <header className={styles.header}>
+                <button className={styles.menubutton} onClick={handleClick}>{isOpen ? "CLOSE" : "MENU"}</button>
+            </header>
+            <MenuOverlay isOpen={isOpen} />
+        </>
+    );
 }
+
 

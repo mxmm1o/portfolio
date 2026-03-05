@@ -1,1 +1,12 @@
-.header {}
+.menubutton {
+    padding: 6px 16px;
+    border-radius: 9999px;
+    border: 1px solid #000;
+}
+
+.header {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
