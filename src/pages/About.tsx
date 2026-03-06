@@ -35,7 +35,7 @@ export function About() {
                         <a className={styles.link} href="https://www.instagram.com/colonelcadenza/?hl=ja">Instagram</a>
                         <br></br>
                         <a className={styles.link} href="https://x.com/mxmm10__">X</a>
-
+                        <br></br>
                         <br></br>
                         <br></br>
                         <iframe
