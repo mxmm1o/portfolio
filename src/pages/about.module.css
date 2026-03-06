@@ -1,11 +1,11 @@
 .background {
     background-color: #E8FF00;
-    min-height: 100%;
-    width: 100vw;
+    min-height: 100vh;
+    /*width: 100vw;*/
     box-sizing: border-box;
     margin: 0;
     padding-top: 6rem;
-
+    padding-bottom: 3rem;
 }
 
 * {

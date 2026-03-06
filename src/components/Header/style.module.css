@@ -7,6 +7,11 @@
 
 }
 
+.menubutton:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 .header {
     position: fixed;
     top: 1rem;
