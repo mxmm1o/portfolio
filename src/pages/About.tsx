@@ -38,11 +38,12 @@ export function About() {
                         <br></br>
                         <br></br>
                         <br></br>
+                        <br></br>
                         <iframe
                             allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
                             frameBorder="0"
                             height="450"
-                            style={{ width: "100%", maxWidth: "400px", overflow: "hidden", borderRadius: "10px" }}
+                            style={{ width: "100%", maxWidth: "500px", overflow: "hidden", borderRadius: "10px" }}
                             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                             src="https://embed.music.apple.com/jp/playlist/dzpls0/pl.u-RRbVY51F3x1723r"
                         />
