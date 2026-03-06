@@ -17,24 +17,27 @@ export function About() {
                         <p> Narumi Ishizu 石津 成海</p>
                         <p>1999年広島生まれ。広島修道大学商学部商学科卒。</p>
                         <p> 映像のディレクションを仕事にしていた。最近は自分で手を動かしてシェーダーの練習をしている。</p>
-                        <p> </p>
-                        <p> </p>
+                        <br></br>
+                        <br></br>
                         <p>好きなもの</p>
                         <p>散歩</p>
+                        <p>IDM</p>
                         <p>ペットの勲(いさお)</p>
                         <p>横浜DeNAベイスターズ</p>
-                        <p>純喫茶のクリームソーダ</p>
-                        <p>フィルムカメラで街を撮ること</p>
-                        <p>薄暗い夜明け</p>
-                        <p>自堕落な生活</p>
-                        <p> </p>
-                        <p> </p>
+                        <p>おもちエイリアン</p>
+                        <p>多肉植物</p>
+                        <br></br>
+                        <br></br>
                         <p>email</p>
-                        <p>ishizunarumi@gmail.com</p>
-                        <p> </p>
-                        <p> </p>
-                        <p>instagram</p>
+                        <a className={styles.link} href="mailto:ishizunarumi@gmail.com">ishizunarumi@gmail.com</a>
+                        <br></br>
+                        <br></br>
+                        <a className={styles.link} href="https://www.instagram.com/colonelcadenza/?hl=ja">Instagram</a>
+                        <br></br>
+                        <a className={styles.link} href="https://x.com/mxmm10__">X</a>
 
+                        <br></br>
+                        <br></br>
                         <p>AppleMusicはる</p>
 
 
