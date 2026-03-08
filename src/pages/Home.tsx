@@ -26,7 +26,7 @@ export function Home() {
         {works.map((work) => (
           <div key={work.id} className={styles.card}>
             <img src={work.image} />
-            <p>{work.title}</p>
+            <div className="overlay"> <p>{work.title}</p></div>
           </div>
         ))}
       </div>
