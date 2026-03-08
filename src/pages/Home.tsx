@@ -31,6 +31,5 @@ export function Home() {
         ))}
       </div>
     </>
-
   );
 }
