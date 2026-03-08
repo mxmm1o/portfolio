@@ -14,7 +14,9 @@ const router = createBrowserRouter([
   { path: '/about', Component: About },
   { path: '/works/:workId', Component: WorkDeteil }
 
-]);
+], {
+  basename: '/portfolio'
+});
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
