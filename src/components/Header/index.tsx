@@ -15,7 +15,6 @@ export function Header() {
                 <MenuOverlay isOpen={isOpen} />
                 <Link className={styles.name} to="/">Narumi Ishizu</Link>
                 <button className={styles.menubutton} onClick={handleClick}>{isOpen ? "CLOSE" : "MENU"}</button>
-
             </header>
         </>
     );
