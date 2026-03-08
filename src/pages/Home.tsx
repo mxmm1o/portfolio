@@ -25,8 +25,8 @@ export function Home() {
       <div className={styles.grid}>
         {works.map((work) => (
           <div key={work.id} className={styles.card}>
-            <img src={work.image} />
-            <div className="overlay"> <p>{work.title}</p></div>
+            <img src={work.image} className={styles.img} />
+            <div className={styles.overlay}> <p>{work.title}</p></div>
           </div>
         ))}
       </div>

@@ -13,14 +13,16 @@
 }
 
 .header {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
     z-index: 1;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 .name {
-    position: fixed;
     text-decoration: none;
     top: 1rem;
     left: 1rem;

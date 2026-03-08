@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MenuOverlay } from "../MenuOverlay/index";
-import styles from "./style.module.css";
+import styles from "./style2.module.css";
 import { Link } from "react-router";
 
 
@@ -12,10 +12,11 @@ export function Header() {
     return (
         <>
             <header className={styles.header}>
+                <MenuOverlay isOpen={isOpen} />
                 <Link className={styles.name} to="/">Narumi Ishizu</Link>
                 <button className={styles.menubutton} onClick={handleClick}>{isOpen ? "CLOSE" : "MENU"}</button>
+
             </header>
-            <MenuOverlay isOpen={isOpen} />
         </>
     );
 }
