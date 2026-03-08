@@ -4,6 +4,13 @@
     gap: 4px;
 }
 
-.image {
+.card {
+    overflow: hidden;
+}
+
+.card img {
     width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
 }

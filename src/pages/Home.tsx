@@ -24,7 +24,7 @@ export function Home() {
       <Header />
       <div className={styles.grid}>
         {works.map((work) => (
-          <div key={work.id}>
+          <div key={work.id} className={styles.card}>
             <img src={work.image} />
             <p>{work.title}</p>
           </div>
