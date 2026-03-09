@@ -8,4 +8,8 @@ export default defineConfig({
     [react(), netlify()],
   base: '/portfolio/',
 
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
 })
