@@ -1,6 +1,5 @@
 import { Header } from '../components/Header'
 import styles from "./Home.module.css";
-import { Link } from "react-router"
 import { works } from "../data/works"
 import { Workcard } from "../components/Workcard"
 
