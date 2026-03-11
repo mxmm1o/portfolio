@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const handleClick = (): void => {
+    const handleClick = () => {
         setIsOpen(!isOpen);
     };
     return (
