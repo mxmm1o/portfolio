@@ -1,6 +1,8 @@
 import { Header } from "../components/Header";
 import styles from "./about.module.css";
 import photo from "../assets/IMG_7858.webp"
+import { Googlemap } from "../components/Googlemap";
+
 
 export function About() {
     return (
@@ -37,6 +39,10 @@ export function About() {
                         <a className={styles.link} href="https://x.com/mxmm10__">X</a>
                         <br></br>
                         <br></br>
+                        <p>好きなお店</p>
+                        <Googlemap src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6850047520816!2d139.6557004757868!3d35.66013167259407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3101ccd1163%3A0xe1ff15fe0e9d3f4d!2sQusamura%20Tokyo!5e0!3m2!1sja!2sjp!4v1773214734793!5m2!1sja!2sjp"
+
+                        />
                         <br></br>
                         <br></br>
                         <iframe
