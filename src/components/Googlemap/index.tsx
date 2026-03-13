@@ -4,8 +4,8 @@ type PropsType = {
 export function Googlemap(props: PropsType) {
     return <iframe
         src={props.src}
-        width="500"
-        height="500"
+        width="100%"
+        height="200"
         style={{ border: 0 }}
         allowFullScreen
         loading="lazy"

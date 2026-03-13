@@ -5,7 +5,7 @@
     display: flex;
     align-items: flex-start;
     gap: 24px;
-    max-width: 700px;
+    max-width: 100%;
     transition: box-shadow 0.2s;
 }
 
@@ -35,6 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    min-width: 0;
 }
 
 .cardTitle {
@@ -47,4 +48,28 @@
     font-size: 13px;
     opacity: 0.5;
     line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+    .pageCols {
+        flex-direction: column;
+    }
+
+    .colLeft {
+        width: 100%;
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .colRight {
+        padding: 24px 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mapCard {
+        flex-direction: column;
+    }
 }
