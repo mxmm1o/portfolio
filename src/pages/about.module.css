@@ -1,41 +1,145 @@
 .background {
     background-color: #E8FF00;
     min-height: 100vh;
-    /*width: 100vw;*/
     box-sizing: border-box;
     margin: 0;
     padding-top: 6rem;
-    padding-bottom: 3rem;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+.pageCols {
+    display: flex;
+    align-items: flex-start;
+}
+
+.colLeft {
+    width: 40%;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 36px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.colLeft::-webkit-scrollbar {
+    display: none;
 }
 
 .photo {
-    margin: 3%;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    display: block;
 }
 
-.text {
-    margin: 3%;
-    color: #000;
+.nameBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 14px;
+}
+
+.nameJa {
+    opacity: 0.45;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    opacity: 0.75;
+    line-height: 1.9;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.sectionLabel {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    opacity: 0.3;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 12px 0;
+}
+
+.contactRow {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.contactLabel {
+    opacity: 0.35;
+    font-size: 12px;
+    width: 72px;
+    flex-shrink: 0;
 }
 
 .link {
-    color: #000;
+    color: #0a0a0a;
     text-decoration: none;
-
+    font-size: 13px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
 }
 
 .link:hover {
     color: white;
-    text-decoration: none;
-
 }
 
-body {
-    height: 100%;
+.colRight {
+    flex: 1;
+    padding: 36px 40px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    opacity: 0.3;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.mapCard {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 700px;
+    max-height: 200px;
+    display: flex;
+}
+
+.shopInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 5px;
+    padding: 20px;
+    min-width: 180px;
+    font-size: 13px;
+}
+
+.address {
+    font-size: 9px;
 }
