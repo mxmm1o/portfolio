@@ -90,15 +90,16 @@ export function About() {
                                     <p>現実 実況プレイ 特別編</p>
                                     <p>～何者にもなれなかった自分攻略〜</p></div>
                             </div>
-                            <iframe
-                                width="100%"
-                                height="200"
-                                src="https://www.youtube.com/embed/BGgxcNrdqm0?si=_GShwcQH1dXJX5-H"
-                                title="YouTube video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            />
+                            <div className={styles.videoWrap}>
+                                <iframe
+                                    width="100%"
+                                    src="https://www.youtube.com/embed/BGgxcNrdqm0?si=_GShwcQH1dXJX5-H"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                />
+                            </div>
                         </div>
 
                     </div>
