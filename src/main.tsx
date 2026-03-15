@@ -7,12 +7,17 @@ import {
 } from 'react-router'
 import { About } from './pages/About'
 import { WorkDeteil } from './pages/WorkDeteil'
+import { Blog } from './pages/Blog'
+import { BlogPost } from './pages/BlogPost'
+
 
 
 const router = createBrowserRouter([
   { path: '/', Component: Home },
   { path: '/about', Component: About },
-  { path: '/works/:workId', Component: WorkDeteil }
+  { path: '/works/:workId', Component: WorkDeteil },
+  { path: '/blog', Component: Blog },
+  { path: '/blog/:id', Component: BlogPost }
 
 ], {
   basename: '/portfolio'

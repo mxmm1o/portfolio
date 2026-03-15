@@ -15,6 +15,8 @@
     "deploy": "npm run rm && npm run build && npm run mv && npm run git"
   },
   "dependencies": {
+    "microcms-js-sdk": "^3.3.0",
+    "progressbar.js": "^1.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router": "^7.13.1"
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
+    "@types/progressbar.js": "^1.1.7",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
