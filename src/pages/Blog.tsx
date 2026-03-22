@@ -13,6 +13,7 @@ export function Blog() {
 
     return (
         <>
+                    <div className={styles.background}>
             <Header />
             <section className={styles.container}>
                 <div className={styles.grid}>
@@ -40,6 +41,7 @@ export function Blog() {
                     ))}
                 </div>
             </section>
+            </div>
         </>
     );
 }
