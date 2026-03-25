@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MenuOverlay } from "../MenuOverlay/index";
-import styles from "./style2.module.css";
+import styles from "./style.module.css";
 import { Link } from "react-router";
 
 

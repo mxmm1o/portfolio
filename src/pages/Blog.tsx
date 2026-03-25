@@ -3,6 +3,7 @@ import { useBlogs } from '../hooks/useBlog';
 import { useNavigate } from 'react-router';
 import styles from './Blog.module.css';
 import { LoadingBar } from '../components/ProgressBar';
+import dayjs from 'dayjs';
 
 
 export function Blog() {
@@ -13,6 +14,7 @@ export function Blog() {
 
     return (
         <>
+                    <div className={styles.background}>
             <Header />
             <section className={styles.container}>
                 <div className={styles.grid}>
@@ -32,14 +34,15 @@ export function Blog() {
                                     </span>
                                 )}
                                 <h2 className={styles.cardTitle}>{blog.title}</h2>
-                                <time className={styles.date}>
-                                    {new Date(blog.publishedAt).toLocaleDateString('ja-JP')}
-                                </time>
+<time className={styles.date}>
+    {dayjs(blog.publishedAt).format('YYYY/MM/DD')}
+</time>
                             </div>
                         </article>
                     ))}
                 </div>
             </section>
+            </div>
         </>
     );
 }
