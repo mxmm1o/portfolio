@@ -120,7 +120,7 @@
 
   .title {
     font-size: 1.4rem;
-    word-break: break-word; /* 長い単語の折り返し */
+    word-break: break-word; 
   }
 
   .body {
