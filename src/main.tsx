@@ -10,7 +10,7 @@ import { WorkDeteil } from './pages/WorkDeteil'
 import { Blog } from './pages/Blog'
 import { BlogPost } from './pages/BlogPost'
 
-
+console.log("test")
 
 const router = createBrowserRouter([
   { path: '/', Component: Home },
