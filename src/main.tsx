@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   { path: '/blog/:id', Component: BlogPost }
 
 ], {
-  basename: '/portfolio'
+  basename: '/'
 });
 
 createRoot(document.getElementById('root')!).render(
