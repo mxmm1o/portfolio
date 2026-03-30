@@ -27,6 +27,9 @@ export function WorkDeteil() {
             )}
             <p className={styles.text}>{work.title}</p>
             <p className={styles.text}>{work.description}</p>
+            {work.credits.map((credit, index) => (  
+                <p key={index} className={styles.credit}>{credit}</p>
+            ))}
         </>
     )
 }

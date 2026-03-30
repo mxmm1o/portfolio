@@ -1,18 +1,26 @@
 .img {
     width: 100%;
     height: auto;
-    padding: 6rem 1rem;
+    display: block;
+    padding: 1rem 1rem;
+}
+
+.img:first-of-type {
+    padding-top: 6rem;
 }
 
 .text {
     margin: 1rem;
 }
 
-
 .video {
     width: 100%;
     aspect-ratio: 16 / 9;
     border: none;
-    padding: 0 1rem;
     box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.credit {
+    margin: 0.5rem 1rem;
 }
