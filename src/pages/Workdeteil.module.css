@@ -7,3 +7,12 @@
 .text {
     margin: 1rem;
 }
+
+
+.video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}

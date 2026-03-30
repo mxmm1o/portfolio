@@ -11,12 +11,11 @@ export function Home() {
       <Header />
       <div className={styles.grid}>
         {works.map((work) => (
-          <Workcard key={work.id}
-            id={work.id}
-            title={work.title}
-            image={work.image}
-            description={work.description} />
-
+<Workcard key={work.id}
+    id={work.id}
+    title={work.title}
+    images={work.images}
+    description={work.description} />
         ))}
 
 
