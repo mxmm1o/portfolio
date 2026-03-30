@@ -6,6 +6,9 @@
   padding: 0;
 }
 
+* {
+    cursor: url('../src/assets/無題11_20260330202630.png'), auto;
+}
 
 /*@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Kiwi+Maru:wght@300;400;500&family=M+PLUS+2:wght@100..900&family=M+PLUS+Rounded+1c&display=swap');*/
 
