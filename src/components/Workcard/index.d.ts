@@ -1,6 +1,6 @@
 type PropsType = {
     id: number;
-    image: string;
+    images: string[];
     description: string;
     title: string;
 };
