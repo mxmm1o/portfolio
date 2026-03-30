@@ -28,7 +28,6 @@ export const works = [
 "Technical Director / Video engineer: Ryoutarou Ishihara (85mm inc.)",
 "Camera Crew: Torataro Sugisaki, tsumiki.(PoTEC inc), Aya",
 "Producer: Takemi Inagaki",
-"Lighting: AKiyo Ogawa (Bach,Inc.), Masahiro Motoike (Faith Property,Inc), Akio Takashima (Jazzy-cool.Co.,Ltd), Hitoshi Takahashi, Nozomi Takahashi, Aoi Kanazawa",
 "Director / Editor: Taichi Nagaoka (85mm inc.), Kairi Sato (tsuchifumazu), Hina Kamura",
 "Producer: Takemi Inagaki",
 "Project Assistant: Narumi Ishizu"
@@ -36,7 +35,6 @@ export const works = [
     { id: 2, title: "Nulbarich SUMMER SONIC 2024 / SWEET LOVE SHOWER 2024", images: [work2, work2b, work2c], description: "AUG 2024", videoUrl: null,     credits: [
   "Creative & Art Director: Masaki Watanabe (maxilla)",
 "Live Cinematographer: Shuho Teramura",
-"Photographer: Ishizunarumi",
 "CG Artist: Ai Ikeda, Kana Nio",
 "CG Modeler: Shion Hirakawa",
 "Live Camera Visual Designer: Hajime Kutsuwada",

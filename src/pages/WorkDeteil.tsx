@@ -27,9 +27,20 @@ export function WorkDeteil() {
             )}
             <p className={styles.text}>{work.title}</p>
             <p className={styles.text}>{work.description}</p>
-            {work.credits.map((credit, index) => (  
-                <p key={index} className={styles.credit}>{credit}</p>
-            ))}
+
+<table className={styles.creditTable}>
+    <tbody>
+{work.credits.map((credit, index) => {
+    const [role, ...rest] = credit.split(': ');
+    return (
+        <tr key={index}>
+            <td className={styles.creditRole}>{role}</td>
+            <td className={styles.creditName}>{rest.join(': ')}</td>
+        </tr>
+    );
+})}
+    </tbody>
+</table>
         </>
     )
 }

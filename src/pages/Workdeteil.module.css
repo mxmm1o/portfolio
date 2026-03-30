@@ -24,3 +24,33 @@
 .credit {
     margin: 0.5rem 1rem;
 }
+
+.creditTable {
+    margin: 1rem;
+    border-collapse: collapse;
+}
+
+.creditRole {
+    padding-right: 10rem;
+    vertical-align: top;
+}
+
+.creditName {
+    vertical-align: top;
+}
+
+@media (max-width: 600px) {
+    .creditTable {
+        width: 100%;
+    }
+
+    .creditRole,
+    .creditName {
+        display: block;
+        padding-right: 0;
+    }
+
+    .creditRole {
+        padding-top: 0.8rem;
+    }
+}
