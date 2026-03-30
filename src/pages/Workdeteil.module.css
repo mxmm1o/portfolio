@@ -4,6 +4,7 @@
     height: auto;
     display: block;
     padding: 1rem 1rem;
+    box-sizing: border-box; 
 }
 
 .img:first-of-type {
