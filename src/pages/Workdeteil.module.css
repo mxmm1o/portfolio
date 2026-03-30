@@ -11,8 +11,15 @@
     padding-top: 6rem;
 }
 
-.text {
-    margin: 1rem;
+.title {
+    margin: 0.3rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.date {
+    margin: 0 1rem 2rem 1rem;  
+    font-size: 0.8rem;
 }
 
 .video {
@@ -24,7 +31,8 @@
 }
 
 .credit {
-    margin: 0.5rem 1rem;
+    margin: 2rem 1rem;
+    padding: 3rem;
 }
 
 .creditTable {
@@ -35,10 +43,13 @@
 .creditRole {
     padding-right: 10rem;
     vertical-align: top;
+    color: #8a8a8a;
+    padding-bottom: 0.5rem; 
 }
 
 .creditName {
     vertical-align: top;
+    padding-bottom: 0.5rem; 
 }
 
 @media (max-width: 768px) {
@@ -53,6 +64,8 @@
     }
 
     .creditRole {
-        padding-top: 0.8rem;
+        padding-top: 1.5rem;
+        font-size: 0.8rem;
+        padding-bottom: 0; 
     }
 }

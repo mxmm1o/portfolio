@@ -25,8 +25,8 @@ export function WorkDeteil() {
                     allowFullScreen
                 />
             )}
-            <p className={styles.text}>{work.title}</p>
-            <p className={styles.text}>{work.description}</p>
+            <p className={styles.title}>{work.title}</p>
+            <p className={styles.date}>{work.description}</p>
 
 <table className={styles.creditTable}>
     <tbody>
