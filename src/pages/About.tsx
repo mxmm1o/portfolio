@@ -5,6 +5,8 @@ import { Googlemap } from "../components/Googlemap";
 import { timelineData } from "../data/timelinecard";
 import { TimelineCard } from "../components/TimelineCard";
 
+// おきにいりのお店・動画を表示する場合は true に戻す
+const SHOW_FAVORITES = false;
 export function About() {
     return (
         <>
@@ -65,6 +67,7 @@ export function About() {
                                 />
                             ))}
                         </div>
+                        {SHOW_FAVORITES && (<>
                         <br />
                         <br />
                         <div className={styles.bio}> <p>おきにいりのお店</p> </div>
@@ -101,6 +104,7 @@ export function About() {
                                 />
                             </div>
                         </div>
+                        </>)}
 
                     </div>
                 </div>

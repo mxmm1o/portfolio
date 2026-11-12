@@ -27,7 +27,7 @@ import work9b from "../assets/pastastab.webp"
 import work9c from "../assets/pastastac.webp"
 
 export const works = [
-    { id: 1, title: "パソコン音楽クラブ 『Love Flutter』 Release Party at Spotify O-east", images: [work1, work1b, work1c,work1d], description: "AUG 2024", videoUrl: "https://youtu.be/nqmQlDu7gM8?si=mchnVoFXx9Lh-5P1",credits: [
+    { id: 1, title: "パソコン音楽クラブ 『Love Flutter』 Release Party at Spotify O-east", images: [work1, work1b, work1c,work1d], description: "2024 AUG", videoUrl: "https://youtu.be/nqmQlDu7gM8?si=mchnVoFXx9Lh-5P1",credits: [
 "Director: tsuchifumazu (watakemi+Kairi Sato)",
 "Live Camera Visual Designer: Shun Nagasawa",
 "Live Camera System Engineer: Joe Ohara",
@@ -38,10 +38,9 @@ export const works = [
 "Camera Crew: Torataro Sugisaki, tsumiki.(PoTEC inc), Aya",
 "Producer: Takemi Inagaki",
 "Director / Editor: Taichi Nagaoka (85mm inc.), Kairi Sato (tsuchifumazu), Hina Kamura",
-"Producer: Takemi Inagaki",
 "Project Assistant: Narumi Ishizu"
     ]},
-    { id: 2, title: "Nulbarich SUMMER SONIC 2024 / SWEET LOVE SHOWER 2024", images: [work2, work2b, work2c], description: "AUG 2024", videoUrl: null,     credits: [
+    { id: 2, title: "Nulbarich SUMMER SONIC 2024 / SWEET LOVE SHOWER 2024", images: [work2, work2b, work2c], description: "2024 AUG", videoUrl: null,     credits: [
   "Creative & Art Director: Masaki Watanabe (maxilla)",
 "Live Cinematographer: Shuho Teramura",
 "CG Artist: Ai Ikeda, Kana Nio",
@@ -72,7 +71,7 @@ export const works = [
 "Music: Narita Haneda",
 "Lyrics: ZE, KizunaAI",
 "Arrangement: phritz",
-"Mixing & Masterring: phritz",
+"Mixing & Mastering: phritz",
 "Produced by: Kizuna AI Inc.",
 "Project Manager: Narumi Ishizu"
     ] },
