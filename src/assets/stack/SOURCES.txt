@@ -1,0 +1,19 @@
+My Stack logo sources
+=====================
+
+All Iconify SVGs were fetched once from https://api.iconify.design/<set>/<name>.svg
+and saved locally. There are no runtime external requests.
+
+- Figma:              Iconify simple-icons:figma
+- Photoshop:          Iconify devicon-plain:photoshop   (official Ps app tile, monochrome)
+- Illustrator:        Iconify devicon-plain:illustrator (official Ai app tile, monochrome)
+- Blender:            Iconify simple-icons:blender
+- Spline:             Official mark at https://spline.design/images/spline_logo.png,
+                      redrawn as a monochrome orb. No public SVG; not in Iconify or simple-icons.
+- Canva:              Iconify bxl:canva                 (C in a circle)
+- Google Workspace:   official 4-segment Google G, each block a different grey tone (fill-opacity)
+- Slack:              Iconify mdi:slack
+- Notion:             Iconify simple-icons:notion
+- Claude:             Iconify simple-icons:claude       (starburst mark)
+- GitHub:             Iconify simple-icons:github
+- After Effects:      Iconify streamline-logos:adobe-after-effects-logo-block (CC BY 4.0, Streamline)

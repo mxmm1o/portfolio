@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 import { Link } from "react-router";
 
 
-export function Header() {
+export function Header({ showMenu = true }: { showMenu?: boolean }) {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
         setIsOpen(!isOpen);
@@ -12,9 +12,9 @@ export function Header() {
     return (
         <>
             <header className={styles.header}>
-                <MenuOverlay isOpen={isOpen} />
+                {showMenu && <MenuOverlay isOpen={isOpen} />}
                 <Link className={styles.name} to="/">Narumi Ishizu</Link>
-                <button className={styles.menubutton} onClick={handleClick}>{isOpen ? "CLOSE" : "MENU"}</button>
+                {showMenu && <button className={styles.menubutton} onClick={handleClick}>{isOpen ? "CLOSE" : "MENU"}</button>}
             </header>
         </>
     );

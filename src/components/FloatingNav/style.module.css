@@ -1,0 +1,144 @@
+.wrap {
+  pointer-events: none;
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.pill,
+.cta {
+  pointer-events: auto;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  height: 54px;
+  padding: 0 0.4rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 10px 40px -10px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+.item,
+.itemActive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 0.55rem;
+  border-radius: 9999px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: background-color 0.2s, color 0.2s, padding 0.25s, min-width 0.25s;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.itemActive {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  transition: max-width 0.28s ease, opacity 0.2s ease, margin 0.28s ease;
+}
+
+.pill:hover .label,
+.pillExpanded .label,
+.item:focus-visible .label {
+  max-width: 5.5rem;
+  opacity: 1;
+}
+
+.item:focus-visible,
+.itemActive:focus-visible,
+.cta:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 1.35rem;
+  border-radius: 9999px;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow:
+    0 10px 28px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.cta:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    top: 0.85rem;
+    justify-content: space-between;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+  }
+
+  .pill {
+    height: 46px;
+    padding: 0 0.22rem;
+    flex-shrink: 0;
+  }
+
+  .item,
+  .itemActive {
+    height: 36px;
+    min-width: 36px;
+    padding: 0 0.38rem;
+  }
+
+  .pill .label,
+  .pill:hover .label,
+  .pillExpanded .label {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .cta {
+    height: 46px;
+    padding: 0 0.95rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+}

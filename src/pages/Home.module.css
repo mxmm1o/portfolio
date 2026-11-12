@@ -1,13 +1,778 @@
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4px;
-    padding: 6rem 1rem;
+/* page */
+.page {
+  position: relative;
+  color: #111;
+  background: #fff;
+  overflow-x: clip;
 }
 
+.page::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 680px;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -12%, rgba(0, 0, 0, 0.045), transparent 62%);
+  z-index: 0;
+}
 
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+.guides {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+}
+
+.guide,
+.guideRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.guide {
+  left: max(2.5rem, calc(50% - 40rem));
+}
+
+.guideRight {
+  right: max(2.5rem, calc(50% - 40rem));
+  left: auto;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(20rem, 1.15fr) auto minmax(16rem, 1fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 7.5rem 3.5rem 4rem 5.75rem;
+}
+
+.heroLeft {
+  min-width: 0;
+}
+
+.heroRole {
+  font-size: clamp(1.85rem, 3vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.roleSlot {
+  position: relative;
+  display: block;
+  height: 1.15em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.roleWord,
+.roleWordOut {
+  display: block;
+}
+
+.roleWord {
+  animation: roleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.roleWordOut {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: roleOut 0.55s ease forwards;
+}
+
+.roleStatic {
+  display: block;
+  white-space: nowrap;
+}
+
+@keyframes roleIn {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(45%);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes roleOut {
+  from {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(-45%);
+  }
+}
+
+.heroLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.75rem;
+}
+
+.pill,
+.pillDark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.pill {
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 22px -12px rgba(0, 0, 0, 0.25);
+}
+
+.pillDark {
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  box-shadow:
+    0 8px 20px -8px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.pill:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.pillDark:hover {
+  background: #fff;
+  color: #111;
+}
+
+.pill:focus-visible,
+.pillDark:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+.heroIcon {
+  position: relative;
+  width: clamp(220px, 26vw, 340px);
+  aspect-ratio: 1;
+  justify-self: center;
+  mix-blend-mode: multiply;
+  user-select: none;
+}
+
+.heroIcon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.heroIcon .heroBlink {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: blink 5.2s step-end infinite;
+}
+
+/* 5.2秒ごとに約0.15秒だけ目を閉じる。たまに2回まばたき */
+@keyframes blink {
+  0% { opacity: 0; }
+  90% { opacity: 1; }
+  93% { opacity: 0; }
+  96% { opacity: 1; }
+  98.5% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroIcon .heroBlink {
+    animation: none;
+  }
+}
+
+.heroRight {
+  max-width: 21rem;
+  justify-self: start;
+  /* 左の見出しブロックと上端の高さをそろえる */
+  align-self: center;
+  padding-bottom: 1.5rem;
+}
+
+.heroHello {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.1rem;
+}
+
+.heroCatch {
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.heroText {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.9;
+}
+
+/* shared sections */
+.works,
+.about,
+.contact {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 6.5rem 3.5rem 6.5rem 5.75rem;
+  scroll-margin-top: 6rem;
+}
+
+.worksHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.15rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.28rem;
+  background: #f2f2f2;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filterBtn,
+.filterActive {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 9999px;
+  padding: 0.48rem 0.95rem;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #555;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.filterBtn:hover {
+  color: #111;
+}
+
+.filterActive {
+  background: #fff;
+  color: #111;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 4px 12px -4px rgba(0, 0, 0, 0.12);
+}
+
+.filterCount {
+  font-size: 0.72rem;
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+.filterActive .filterCount {
+  color: #777;
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  gap: 6.5rem;
+}
+
+.workCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.workHead {
+  margin-bottom: 1.75rem;
+}
+
+.workTitle {
+  font-size: clamp(1.3rem, 2.3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+
+.workMeta {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  color: #9a9a9a;
+  font-size: 0.88rem;
+}
+
+.workBody {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.workImageWrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f2f2f2;
+  min-height: 280px;
+}
+
+.workImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 16 / 11;
+  transition: transform 0.55s ease;
+}
+
+.workCard:hover .workImage {
+  transform: scale(1.03);
+}
+
+.workYear {
+  position: absolute;
+  right: 1.15rem;
+  bottom: 1rem;
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.22rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.workPanel {
+  background: #f3f3f3;
+  border-radius: 20px;
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  min-height: 0;
+  height: auto;
+  width: 100%;
+  align-self: center;
+}
+
+.workPanelBody {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.05rem 1.1rem 1.1rem;
+}
+
+.workRoleText {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.workTools {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.workToolsLabel {
+  margin: 0;
+  color: #8a8a8a;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.workToolsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.workPanelFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.05rem 0.35rem 0.15rem;
+  flex-shrink: 0;
+}
+
+.workRoleLabel {
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
+
+.workView {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.45);
+}
+
+/* about */
+.aboutLabel {
+  color: #9a9a9a;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.aboutHeadline {
+  font-size: clamp(1.55rem, 2.8vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.45;
+  margin-bottom: 1.15rem;
+}
+
+.aboutBio {
+  font-size: 1.02rem;
+  line-height: 1.95;
+  color: #444;
+  max-width: 58rem;
+}
+
+.subhead,
+.subheadSm {
+  margin-top: 5rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.03em;
+}
+
+.subheadSm {
+  margin-top: 3.5rem;
+  font-size: 1.35rem;
+  color: #555;
+}
+
+.journey {
+  list-style: none;
+}
+
+.journeyItem {
+  padding: 1.15rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.journeyItem:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.journeyRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1.3fr 0.7fr;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.journeyTitle {
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.journeyCompany,
+.journeyPeriod {
+  color: #6b6b6b;
+  font-size: 0.95rem;
+}
+
+.journeyPeriod {
+  text-align: right;
+}
+
+.journeyBody {
+  margin-top: 0.45rem;
+  color: #8a8a8a;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 50rem;
+}
+
+.stack {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2.85rem 2rem;
+  max-width: 54rem;
+  justify-items: center;
+  align-items: start;
+  margin: 0;
+  padding: 0.85rem 0 0.4rem;
+}
+
+.stackItem {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.certs {
+  list-style: none;
+  max-width: 34rem;
+}
+
+.certItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+}
+
+.certName {
+  color: #555;
+}
+
+.certDate {
+  color: #9a9a9a;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.likes {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.likeItem {
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  color: #555;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 960px) {
+  .stack {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem 1rem;
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stack {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.65rem 0.65rem;
+    max-width: 100%;
+  }
+}
+
+/* contact */
+.contact {
+  padding-bottom: 8.5rem;
+}
+
+.contactList {
+  margin-top: 2.5rem;
+  max-width: 36rem;
+}
+
+.contactList div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contactList dt {
+  color: #8a8a8a;
+  font-size: 0.92rem;
+}
+
+.contactList a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  padding-bottom: 1px;
+}
+
+.contactList a:hover {
+  border-bottom-color: #111;
+}
+
+.contactList a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roleWord,
+  .roleWordOut,
+  .workImage {
+    animation: none;
+    transition: none;
+  }
+
+  .workCard:hover .workImage {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 6.5rem 1.35rem 3.5rem;
+    gap: 2.25rem;
+    justify-items: stretch;
+  }
+
+  .heroIcon {
+    width: min(240px, 70vw);
+    justify-self: center;
+  }
+
+  .heroRight {
+    max-width: none;
+  }
+
+  .heroRole {
+    font-size: clamp(1.7rem, 7.6vw, 2.2rem);
+  }
+
+  .works,
+  .about,
+  .contact {
+    padding: 4.5rem 1.35rem;
+  }
+
+  .workBody {
+    grid-template-columns: 1fr;
+  }
+
+  .workPanel {
+    height: auto;
+  }
+
+  .guides {
+    display: none;
+  }
+
+  .workImage {
+    aspect-ratio: 16 / 10;
+  }
+
+  .workImageWrap {
+    min-height: 0;
+  }
+
+  .journeyRow {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .journeyPeriod {
+    text-align: left;
+  }
+
+  .workList {
+    gap: 4rem;
+  }
+
+  .filters {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroLinks .pill,
+  .heroLinks .pillDark {
+    flex: 1;
+    text-align: center;
+  }
+
+  .contactList div {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+  }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -6,15 +7,20 @@
   padding: 0;
 }
 
-* {
-    cursor: url('../src/assets/無題11_20260330202630.png'), auto;
+a,
+button,
+[role="button"],
+summary,
+label[for] {
+  cursor: pointer;
 }
 
-/*@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Kiwi+Maru:wght@300;400;500&family=M+PLUS+2:wght@100..900&family=M+PLUS+Rounded+1c&display=swap');*/
-
 body {
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-style: normal;
   min-height: 100vh;
+}
+html {
+  scroll-behavior: smooth;
 }
