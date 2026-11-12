@@ -16,6 +16,15 @@ import work5c from "../assets/IMG_5361.jpg"
 import work6 from "../assets/univa.webp"
 import work6b from "../assets/IMG_5369.jpg"
 import work6c from "../assets/IMG_5359.jpg"
+import work7 from "../assets/yojinoda.webp"
+import work7b from "../assets/yojinodab.webp"
+import work7c from "../assets/yojinodac.webp"
+import work8 from "../assets/kroi.webp"
+import work8b from "../assets/kroib.webp"
+import work8c from "../assets/kroic.webp"
+import work9 from "../assets/pastasta.webp"
+import work9b from "../assets/pastastab.webp"
+import work9c from "../assets/pastastac.webp"
 
 export const works = [
     { id: 1, title: "パソコン音楽クラブ 『Love Flutter』 Release Party at Spotify O-east", images: [work1, work1b, work1c,work1d], description: "AUG 2024", videoUrl: "https://youtu.be/nqmQlDu7gM8?si=mchnVoFXx9Lh-5P1",credits: [
@@ -72,4 +81,40 @@ export const works = [
         "Project Manager: Narumi Ishizu",
         "cl: DENTSU INC."
 ] },
+    { id: 7, title: "野田洋次郎 Yojiro Noda welcomes you to WONDER BOY'S AKUMU CLUB at 東京ガーデンシアター", images: [work7, work7b, work7c], description: "2024 SEP", videoUrl: null,    credits: [
+"Director: Masaki Watanabe (maxilla)",
+"Creative Producer: Kensuke Kidani (volvox), Sosuke Minamiura (volvox)",
+"Producer: Takemi Inagaki",
+"Motion Graphics Designer (M03 PAIN KILLER): Kairi Sato (tsuchifumazu)",
+"3DCG Artist (M05 HOLY DAY HOLY): Hajime Kutsuwada",
+"3DCG Artist (M07 EVERGREEN [KM Remix]): Haruhi Oshima",
+"Director (M12 HYPER TOY): AVO (maxilla)",
+"3DCG Artist (M12 HYPER TOY): Ai Ikeda",
+"Motion Graphics Designer (M13 LAST LOVE LETTER): Shosei Iwata",
+"3DCG Artist (M13 LAST LOVE LETTER): Ai Ikeda",
+"Live Operation: watakemi (tsuchifumazu), Jura Nishizato",
+"Live Camera Visual Designer: Shun Nagasawa",
+"Live Camera System Engineer: Joe Ohara",
+"Project Manager: Narumi Ishizu"
+    ] },
+    { id: 8, title: "Kroi Live Tour 2024-2025 \"Unspoil\" at PIA ARENA MM", images: [work8c, work8, work8b], description: "2025 FEB", videoUrl: null,    credits: [
+"Director: Takuto Shimpo",
+"Producer: Takemi Inagaki",
+"Motion Designer: Asaka Kishida, Asuka Fujino, Mirai Shikiyama, Kosuke Inoue",
+"CG Artist: Ai Ikeda, Haruhi Oshima, Hajime Kutsuwada, KENNY, Yusaku Kamata (zah), Takuma Takei (zah), Hiroaki Terada",
+"Live Camera Visual Designer: Hajime Kutsuwada, Shun Nagasawa",
+"Live Operation: Shun Nagasawa, Ikuma Nagano",
+"Cameraman: Yuki Ono, Shuho Teramura, Denki Imahara, Kenji Omochi, Tomomi Iwaisako",
+"Camera Assistant: Taichi Nagaoka (85mm inc.), Ryuta Yoshida (unlevel inc.)",
+"Technical Director: Ryoutarou Ishihara (85mm inc.)",
+"Switcher: Riki Yasuno",
+"Photo: Daiki Miura",
+"Project Manager: Narumi Ishizu"
+    ] },
+    { id: 9, title: "PAS TASTA SUMMER SONIC 2025 TOKYO Spotify Stage", images: [work9b, work9, work9c], description: "2025 AUG", videoUrl: null,    credits: [
+"Live VJ Director: tsuchifumazu (watakemi+Kairi Sato)",
+"Live Camera: Taichi Nagaoka (85mm inc.)",
+"Producer: Takemi Inagaki",
+"Project Manager: Narumi Ishizu"
+    ] },
 ]
